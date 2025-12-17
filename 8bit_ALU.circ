@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="8"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+
+  <main name="main"/>
+  
+  <circuit name="main">
+    <a name="circuit" val="main"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <wire from="(120,180)" to="(140,180)"/>
+    <wire from="(120,220)" to="(140,220)"/>
+    <wire from="(120,120)" to="(180,120)"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,120)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OpCode"/>
+    </comp>
+    
+    <comp lib="0" loc="(800,300)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(800,400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Zero"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(800,430)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Equal"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(800,460)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LessThan"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(800,490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="GreaterThan"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="6" loc="(400,50)" name="Text">
+      <a name="text" val="8-BIT ALU WITH 14 OPERATIONS"/>
+      <a name="font" val="SansSerif bold 14"/>
+    </comp>
+    
+    <comp lib="6" loc="(150,80)" name="Text">
+      <a name="text" val="INPUTS"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    
+    <comp lib="6" loc="(750,250)" name="Text">
+      <a name="text" val="OUTPUTS"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,550)" name="Text">
+      <a name="text" val="OPCODES:"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,580)" name="Text">
+      <a name="text" val="0000: ADD"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,600)" name="Text">
+      <a name="text" val="0001: INC"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,620)" name="Text">
+      <a name="text" val="0010: DEC"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,640)" name="Text">
+      <a name="text" val="0011: CMP"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,660)" name="Text">
+      <a name="text" val="0100: NOT"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,680)" name="Text">
+      <a name="text" val="0101: AND"/>
+    </comp>
+    
+    <comp lib="6" loc="(200,700)" name="Text">
+      <a name="text" val="0110: OR"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,580)" name="Text">
+      <a name="text" val="0111: SHR"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,600)" name="Text">
+      <a name="text" val="1000: SHL"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,620)" name="Text">
+      <a name="text" val="1001: XOR"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,640)" name="Text">
+      <a name="text" val="1010: SUB"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,660)" name="Text">
+      <a name="text" val="1011: NAND"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,680)" name="Text">
+      <a name="text" val="1100: NOR"/>
+    </comp>
+    
+    <comp lib="6" loc="(350,700)" name="Text">
+      <a name="text" val="1101: PASS A"/>
+    </comp>
+    
+  </circuit>
+  
+  <circuit name="Adder8bit">
+    <a name="circuit" val="Adder8bit"/>
+    <a name="clabel" val="ADD"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,200)" name="Adder">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Sum"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Carry"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="Incrementer8bit">
+    <a name="circuit" val="Incrementer8bit"/>
+    <a name="clabel" val="INC"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(200,220)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x1"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,200)" name="Adder">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="Decrementer8bit">
+    <a name="circuit" val="Decrementer8bit"/>
+    <a name="clabel" val="DEC"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(200,220)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0x1"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,200)" name="Subtractor">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="Comparator8bit">
+    <a name="circuit" val="Comparator8bit"/>
+    <a name="clabel" val="CMP"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,200)" name="Comparator">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Equal"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LessThan"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="GreaterThan"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="NOT8bit">
+    <a name="circuit" val="NOT8bit"/>
+    <a name="clabel" val="NOT"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,180)" name="NOT Gate">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="AND8bit">
+    <a name="circuit" val="AND8bit"/>
+    <a name="clabel" val="AND"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,200)" name="AND Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="OR8bit">
+    <a name="circuit" val="OR8bit"/>
+    <a name="clabel" val="OR"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,200)" name="OR Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="ShiftRight8bit">
+    <a name="circuit" val="ShiftRight8bit"/>
+    <a name="clabel" val="SHR"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,180)" name="Shifter">
+      <a name="width" val="8"/>
+      <a name="shift" val="lr"/>
+    </comp>
+    
+    <comp lib="0" loc="(200,200)" name="Constant">
+      <a name="width" val="3"/>
+      <a name="value" val="0x1"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="ShiftLeft8bit">
+    <a name="circuit" val="ShiftLeft8bit"/>
+    <a name="clabel" val="SHL"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,180)" name="Shifter">
+      <a name="width" val="8"/>
+      <a name="shift" val="ll"/>
+    </comp>
+    
+    <comp lib="0" loc="(200,200)" name="Constant">
+      <a name="width" val="3"/>
+      <a name="value" val="0x1"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="XOR8bit">
+    <a name="circuit" val="XOR8bit"/>
+    <a name="clabel" val="XOR"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,200)" name="XOR Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="Subtractor8bit">
+    <a name="circuit" val="Subtractor8bit"/>
+    <a name="clabel" val="SUB"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="3" loc="(300,200)" name="Subtractor">
+      <a name="width" val="8"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Borrow"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="NAND8bit">
+    <a name="circuit" val="NAND8bit"/>
+    <a name="clabel" val="NAND"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,200)" name="NAND Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="NOR8bit">
+    <a name="circuit" val="NOR8bit"/>
+    <a name="clabel" val="NOR"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(120,220)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="B"/>
+    </comp>
+    
+    <comp lib="1" loc="(300,200)" name="NOR Gate">
+      <a name="width" val="8"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+  
+  <circuit name="PassA8bit">
+    <a name="circuit" val="PassA8bit"/>
+    <a name="clabel" val="PASS"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="8"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
+    
+    <comp lib="0" loc="(400,180)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Result"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+  </circuit>
+
+</project>
